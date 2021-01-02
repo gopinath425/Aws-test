@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'echo "Fello World"'
+                sh 'aws cloudformation create-stack --stack-name myteststack --template-body file:///home/test/Desktop/Project/sample_cfn.json --capabilities CAPABILITY_IAM
+'
             }
         }
     }
